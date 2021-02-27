@@ -12,3 +12,8 @@ actor.save
   actor = Actor.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, known_for: Faker::Movie.quote)
   actor.save
 end
+@random = Random.new.rand(1999..2020)
+50.times do
+  movie = Movie.new(title: Faker::Movie.title, year: @random, plot: Faker::Movie.quote)
+  movie.save
+end
